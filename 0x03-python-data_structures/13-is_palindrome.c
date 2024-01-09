@@ -14,7 +14,7 @@ listint_t *fasttrav = *head;
 listint_t *prev_slowtrav = *head;
 listint_t *first_half = *head;
 listint_t *second_half = NULL;
-if (*head == NULL && (*head)->next == NULL) 
+if (*head == NULL || (*head)->next == NULL) 
 return (1);
 while (fasttrav != NULL && fasttrav->next != NULL) 
 {
