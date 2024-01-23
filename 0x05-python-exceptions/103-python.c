@@ -23,7 +23,7 @@ printf("[*] Allocated = %lu\n", ((PyListObject *)p)->allocated);
 for (i = 0; i < size; i++)
 {
 item = PyList_GET_ITEM(p, i);
-printf("Element %d: %s\n", i, item->ob_type->tp_name);
+printf("Element %zd: %s\n", i, item->ob_type->tp_name);
 if (PyBytes_Check(item))
 print_python_bytes(item);
 else if (PyFloat_Check(item))
