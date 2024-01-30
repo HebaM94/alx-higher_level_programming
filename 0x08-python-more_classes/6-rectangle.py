@@ -79,7 +79,7 @@ class Rectangle:
 
         Return a string that can be used to recreate the object"""
         return ("Rectangle('" + self.__width + "', " + self.__height + ")")
-    
+
     def __del__(self):
         """Destructor of a Rectangle object"""
         type(self).number_of_instances -= 1
