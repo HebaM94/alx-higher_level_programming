@@ -72,4 +72,3 @@ class Rectangle:
 
         Return a string that can be used to recreate the object"""
         return (f'Rectangle({self.__width}, {self.__height})')
-
