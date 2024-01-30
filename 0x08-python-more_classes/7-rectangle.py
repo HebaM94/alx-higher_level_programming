@@ -80,7 +80,7 @@ class Rectangle:
         """Representation string of a Rectangle object
 
         Return a string that can be used to recreate the object"""
-        return ("Rectangle('" + self.__width + "', " + self.__height + ")")
+        return (f'Rectangle({self.__width}, {self.__height})')
 
     def __del__(self):
         """Destructor of a Rectangle object"""
