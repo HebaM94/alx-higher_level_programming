@@ -24,10 +24,6 @@ Now use it:
 The result of division is rounded to  2 decimal places:
 
 ::
-    >>> matrix = [
-    ...     [2, 4, 6],
-    ...     [8, 10, 12]
-    ... ]
     >>> print(matrix_divided(matrix, 3))
     [[0.66, 1.33, 2.0], [2.67, 3.33, 4.0]]
 
