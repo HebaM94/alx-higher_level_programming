@@ -1,0 +1,84 @@
+The ``5-text_indentation`` module
+=================================
+This module provides a text-indentation function after each '.', '?', and ':'
+``text_indentation(text)``
+
+Using ``text_indentation``
+--------------------------
+
+This is a text file in reStructuredText format.  First import
+``text_indentation`` from the ``5-text_indentation`` module:
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Now use it:
+
+::
+    >>> text_indentation("Where?")
+    Where?
+    <BLANKLINE>
+
+Space at the beginning or the end of the text line are skipped:
+
+::
+    >>> text_indentation("   These points are as follows:")
+    These points are as follows:
+    <BLANKLINE>
+
+::
+    >>> text_indentation("    ")
+
+
+::
+    >>> text_indentation("World.   ")
+    World.
+    <BLANKLINE>
+
+::
+    >>> text_indentation("   Hello.    World.   ")
+    Hello.
+    <BLANKLINE>
+    World.
+    <BLANKLINE>
+
+Empty New lines are only printed after each of these characters: '.', '?' and ':' only:
+
+::
+    >>> text_indentation("Hello, World!")
+    Hello, World!
+
+New lines within a string are printed:
+
+::
+    >>> text_indentation("Python:\n Hello,\n\n\n World!")
+    Python
+    <BLANKLINE>
+    <BLANKLINE>
+    Hello, 
+    <BLANKLINE>
+    <BLANKLINE>
+    World!
+
+Invalid Text
+============
+
+The paramter ``text`` must be a string, otherwise a TypeError will be raised.
+
+::
+    >>> text_indentation(5)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+::
+    >>> text_indentation([1, 2, 3])
+    Traceback (most recent call last):
+    TypeError: text must be a string
+::
+    >>> text_indentation({"one": 1, "two": 2})
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+::
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    TypeError: text must be a string
