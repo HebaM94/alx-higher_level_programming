@@ -73,6 +73,7 @@ The paramter ``text`` must be a string, otherwise a TypeError will be raised.
     >>> text_indentation([1, 2, 3])
     Traceback (most recent call last):
     TypeError: text must be a string
+    
 ::
     >>> text_indentation({"one": 1, "two": 2})
     Traceback (most recent call last):
