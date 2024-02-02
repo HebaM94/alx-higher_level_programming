@@ -29,13 +29,13 @@ The result of division is rounded to  2 decimal places:
     ...     [8, 10, 12]
     ... ]
     >>> print(matrix_divided(matrix, 3))
-    [[0.66, 1.33, 2.0], [2.66, 3.33, 4.0]]
+    [[0.66, 1.33, 2.0], [2.67, 3.33, 4.0]]
 
 The original matrix is unchanged as the results are saved in new matrix:
 
 ::
     >>> print(matrix)
-    [[1, 2, 3], [4, 5, 6]]
+    [[2, 4, 6], [8, 10, 12]]
 
 The floats numbers can be used so int and floats  can be mixed together:
 
@@ -45,7 +45,7 @@ The floats numbers can be used so int and floats  can be mixed together:
     ...     [-4.6, 5.3, -6.4]
     ... ]
     >>> print(matrix_divided(matrix, 3))
-    [[0.4, 0.83, 1.08], [-1.53, 1.76, -2.13]]
+    [[0.4, 0.83, 1.08], [-1.53, 1.77, -2.13]]
 
 ::
     >>> matrix = [
@@ -53,7 +53,7 @@ The floats numbers can be used so int and floats  can be mixed together:
     ...     [-4.6, 5, -6.4]
     ... ]
     >>> print(matrix_divided(matrix, 3))
-    [[0.33, 0.83, 1.0], [-1.53, 1.66, -2.13]]
+    [[0.33, 0.83, 1.0], [-1.53, 1.67, -2.13]]
 
 Invalid Matrices
 ================
