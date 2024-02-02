@@ -1,15 +1,15 @@
-The ``100-matrix_mul`` module
-=============================
+The ``101-lazy_matrix_mul`` module
+==================================
 This module provides a function to multiply two matrices
-``matrix_mul(m_a, m_b)``
+``lazy_matrix_mul(m_a, m_b)``
 
-Using ``matrix_mul``
---------------------
+Using ``lazy_matrix_mul``
+-------------------------
 
 This is a text file in reStructuredText format.  First import
-``text_indentation`` from the ``100-matrix_mul`` module:
+``text_indentation`` from the ``101-lazy_matrix_mul`` module:
 
-    >>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+    >>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
 
 Now use it:
 
