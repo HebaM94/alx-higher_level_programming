@@ -43,8 +43,7 @@ The floats numbers can be used so int and floats  can be mixed together:
     ... [7.2, 4.4]
     ... ]
     >>> print(matrix_mul(m_a, m_b))
-    [[34.69, 55.44000000000001], [-78.61, 29.018000000000008]]
-
+    [[22.150000000000002, 29.259999999999998], [-84.45, -20.020000000000003]]
 
 ::
     >>> m_a = [
@@ -53,7 +52,7 @@ The floats numbers can be used so int and floats  can be mixed together:
     ... ]
 
     >>> print(matrix_mul(m_a, m_b))
-    [[73.03999999999999, 84.5, 95.4], [166.58800000000002, 195.8, 223.74]]
+    [[19.35, 27.5], [-83.58000000000001, -21.340000000000003]]
 
 The two arguments must be provided, otherwise, a TypeError will be raised:
 
