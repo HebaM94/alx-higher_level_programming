@@ -15,7 +15,7 @@ Now use it:
 
 ::
    >>> say_my_name("Mikasa", "Ackraman")
-    My name is Mikasa BaraAckramanban
+    My name is Mikasa Ackraman
 
 ::
     >>> say_my_name("Dong-min", "Lee")
