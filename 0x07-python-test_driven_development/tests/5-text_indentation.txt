@@ -51,7 +51,7 @@ New lines within a string are printed:
 
 ::
     >>> text_indentation("Python:\n Hello,\n\n\n World!")
-    Python
+    Python:
     <BLANKLINE>
     <BLANKLINE>
     Hello,
