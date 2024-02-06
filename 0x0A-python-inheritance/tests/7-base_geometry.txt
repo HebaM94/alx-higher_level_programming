@@ -86,7 +86,7 @@ case 8: No arguments passed:
     >>> base_geo.integer_validator()
     Traceback (most recent call last):
     	      ...
-    TypeError: integer_validator() missing 2 required positional arguments: 'arg' and 'value'
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
 
 case 9 : Passing more arguments than required:
