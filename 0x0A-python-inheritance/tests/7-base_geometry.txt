@@ -49,7 +49,47 @@ case 4: Passing a boolean value:
     TypeError: arg must be an integer
 
 
-case 5: Passing a negative value:
+case 5: Passing a tuple as a value:
+
+::
+    >>> base_geo = BaseGeometry()
+    >>> base_geo.integer_validator("arg", (2,))
+    Traceback (most recent call last):
+    	      ...
+    TypeError: arg must be an integer
+
+
+case 6: Passing a list as a value:
+
+::
+    >>> base_geo = BaseGeometry()
+    >>> base_geo.integer_validator("arg", [2])
+    Traceback (most recent call last):
+    	      ...
+    TypeError: arg must be an integer
+
+
+case 7: Passing a dict as a value:
+
+::
+    >>> base_geo = BaseGeometry()
+    >>> base_geo.integer_validator("arg", {2, 4, 6})
+    Traceback (most recent call last):
+              ...
+    TypeError: arg must be an integer
+
+
+case 8: Passing None as a value:
+
+::
+    >>> base_geo = BaseGeometry()
+    >>> base_geo.integer_validator("arg", None)
+    Traceback (most recent call last):
+              ...
+    TypeError: arg must be an integer
+
+
+case 9: Passing a negative value:
 
 ::
     >>> base_geo = BaseGeometry()
@@ -59,7 +99,7 @@ case 5: Passing a negative value:
     ValueError: arg must be greater than 0
 
 
-case 6: Passing a zero value:
+case 10: Passing a zero value:
 
 ::
     >>> base_geo = BaseGeometry()
@@ -69,7 +109,7 @@ case 6: Passing a zero value:
     ValueError: arg must be greater than 0
 
 
-case 7: Passing only one argument to integer_validator:
+case 11: Passing only one argument to integer_validator:
 
 ::
     >>> base_geo = BaseGeometry()
@@ -79,7 +119,7 @@ case 7: Passing only one argument to integer_validator:
     TypeError: integer_validator() missing 1 required positional argument: 'value'
 
 
-case 8: No arguments passed:
+case 12: No arguments passed:
 
 ::
     >>> base_geo = BaseGeometry()
@@ -89,7 +129,7 @@ case 8: No arguments passed:
     TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
 
-case 9 : Passing more arguments than required:
+case 13: Passing more arguments than required:
 
 ::
     >>> base_geo = BaseGeometry()
@@ -99,7 +139,7 @@ case 9 : Passing more arguments than required:
     TypeError: integer_validator() takes 3 positional arguments but 4 were given
 
 
-case 10: Passing arguments to area method which only take ``self``:
+case 14: Passing arguments to area method which only take ``self``:
 
 ::
     >>> base_geo = BaseGeometry()
