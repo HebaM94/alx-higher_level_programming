@@ -36,6 +36,7 @@ case 2: using object which is not inistantiated:
     >>> my_listx.print_sorted()
     Traceback (most recent call last):
     File "<doctest 1-my_list.txt[10]>", line 1, in <module>
+        my_listx.print_sorted()
     NameError: name 'my_listx' is not defined
 
 
