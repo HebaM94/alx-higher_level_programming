@@ -21,10 +21,11 @@ class Student:
         """Retrieve a dictionary representation of the Student
 
         Args:
-            attrs (list): The attributes to be represented, by default it's None
+            attrs (list): The attributes to be represented,
+            by default it's None
             Note: If attrs is a list of strings, only attribute names
             contained in this list must be retrieved
         """
-        if attrs == None:
+        if attrs is None:
             return (self.__dict__)
         return ({a: getattr(self, a) for a in attrs if hasattr(self, a)})
