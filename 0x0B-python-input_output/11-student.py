@@ -29,7 +29,7 @@ class Student:
         if attrs is None:
             return (self.__dict__)
         return ({a: getattr(self, a) for a in attrs if hasattr(self, a)})
-    
+
     def reload_from_json(self, json):
         """Replace all attributes of the Student
 
