@@ -22,8 +22,8 @@ class Student:
 
         Args:
             attrs (list): The attributes to be represented, by default it's None
-            Note: If attrs is a list of strings, only attribute names contained in this
-            list must be retrieved
+            Note: If attrs is a list of strings, only attribute names
+            contained in this list must be retrieved
         """
         if attrs == None:
             return (self.__dict__)
