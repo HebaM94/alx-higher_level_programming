@@ -111,6 +111,7 @@ class TestBase_to_json_string(unittest.TestCase):
     def test_to_json_string_rectangle_one_dict(self):
         """Test if one rectangle object is correctly converted to json string"""
         rect = Rectangle(8, 4, 2, 8, 6)
+        print(len(Base.to_json_string([rect.to_dictionary()])))
         self.assertTrue(len(Base.to_json_string([rect.to_dictionary()])) == 53)
 
     def test_to_json_string_rectangle_two_dicts(self):
