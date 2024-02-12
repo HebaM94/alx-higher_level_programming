@@ -103,7 +103,7 @@ class TestRectangle_instantiation(unittest.TestCase):
         """Test the setter method of the height attribute"""
         rect = Rectangle(10, 6, 5, 4, 9)
         rect.height = 10
-        self.assertEqual(5, rect.height)
+        self.assertEqual(10, rect.height)
 
     def test_x_getter(self):
         """Test the getter method of the x-coordinate attribute"""
@@ -485,7 +485,7 @@ class TestRectangle_stdout(unittest.TestCase):
     def test_str_method_width_height_x_y(self):
         """Tests that str(rect) prints width, height, x, y, id"""
         rect = Rectangle(10, 5, 5, 4, 9)
-        correct = "[Rectangle] ({})) 5/4 - 10/5".format(rect.id)
+        correct = "[Rectangle] ({}) 5/4 - 10/5".format(rect.id)
         self.assertEqual(correct, str(rect))
 
     def test_str_method_changed_attributes(self):
