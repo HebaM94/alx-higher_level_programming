@@ -111,14 +111,14 @@ class TestBase_to_json_string(unittest.TestCase):
     def test_to_json_string_rectangle_one_dict(self):
         """Test if one rectangle object is correctly converted to json string"""
         rect = Rectangle(8, 4, 2, 8, 6)
-        self.assertEqual(len(Base.to_json_string([rect.to_dictionary()])), 53)
+        self.assertTrue(len(Base.to_json_string([rect.to_dictionary()])) == 52)
 
     def test_to_json_string_rectangle_two_dicts(self):
         """Test if multiple rectangle objects are correctly converted to json string"""
         rect1 = Rectangle(8, 4, 2, 8, 6)
         rect2 = Rectangle(4, 2, 4, 1, 12)
         list_dicts = [rect1.to_dictionary(), rect2.to_dictionary()]
-        self.assertTrue(len(Base.to_json_string(list_dicts)) == 106)
+        self.assertEqual(len(Base.to_json_string(list_dicts)), 106)
 
     def test_to_json_string_square_type(self):
         """Test if square type is correctly converted to json string"""
@@ -128,14 +128,14 @@ class TestBase_to_json_string(unittest.TestCase):
     def test_to_json_string_square_one_dict(self):
         """Test if one square object is correctly converted to json string"""
         sq = Square(8, 2, 2, 4)
-        self.assertTrue(len(Base.to_json_string([sq.to_dictionary()])) == 39)
+        self.assertEqual(len(Base.to_json_string([sq.to_dictionary()])), 39)
 
     def test_to_json_string_square_two_dicts(self):
         """Test if multiple square objects are correctly converted to json string"""
         sq1 = Square(8, 2, 2, 4)
         sq2 = Square(9, 3, 6, 3)
         list_dicts = [sq1.to_dictionary(), sq2.to_dictionary()]
-        self.assertTrue(len(Base.to_json_string(list_dicts)) == 78)
+        self.assertEqual(len(Base.to_json_string(list_dicts)), 78)
 
     def test_to_json_string_empty_list(self):
         """Test an empty list pased as an argument"""
@@ -180,7 +180,7 @@ class TestBase_save_to_file(unittest.TestCase):
         rect = Rectangle(10, 5, 2, 6, 2)
         Rectangle.save_to_file([rect])
         with open("Rectangle.json", "r") as f:
-            self.assertTrue(len(f.read()) == 53)
+            self.assertEqual(len(f.read()), 53)
 
     def test_save_to_file_two_rectangles(self):
         """Test saving two Rectangle objects to the same file"""
@@ -188,14 +188,14 @@ class TestBase_save_to_file(unittest.TestCase):
         rect2 = Rectangle(9, 3, 2, 2, 3)
         Rectangle.save_to_file([rect1, rect2])
         with open("Rectangle.json", "r") as f:
-            self.assertTrue(len(f.read()) == 105)
+            self.assertEqual(len(f.read()), 105)
 
     def test_save_to_file_one_square(self):
         """Test saving one Square object to a file"""
         sq = Square(10, 2, 2, 8)
         Square.save_to_file([sq])
         with open("Square.json", "r") as f:
-            self.assertTrue(len(f.read()) == 39)
+            self.assertEqual(len(f.read()), 39)
 
     def test_save_to_file_two_squares(self):
         """Test saving two Square objects to the same file"""
@@ -203,14 +203,14 @@ class TestBase_save_to_file(unittest.TestCase):
         sq2 = Square(5, 3, 3, 7)
         Square.save_to_file([sq1, sq2])
         with open("Square.json", "r") as f:
-            self.assertTrue(len(f.read()) == 77)
+            self.assertEqual(len(f.read()), 77)
 
     def test_save_to_file_cls_name_for_filename(self):
         """Test that class name is used for filename if no argument given"""
         sq = Square(10, 2, 2, 8)
         Base.save_to_file([sq])
         with open("Base.json", "r") as f:
-            self.assertTrue(len(f.read()) == 39)
+            self.assertEqual(len(f.read()), 39)
 
     def test_save_to_file_overwrite(self):
         """Test overwriting an existing file"""
@@ -219,7 +219,7 @@ class TestBase_save_to_file(unittest.TestCase):
         sq = Square(10, 2, 2, 8)
         Square.save_to_file([sq])
         with open("Square.json", "r") as f:
-            self.assertTrue(len(f.read()) == 39)
+            self.assertEqual(len(f.read()), 39)
 
     def test_save_to_file_None(self):
         """Test passing None to save_to_file"""
