@@ -53,7 +53,8 @@ class Base:
         """Returns the list of the JSON string representation json_string
 
         Args:
-            json_string (json str): string representing a list of dictionaries"""
+            json_string (json str): string representing a
+            list of dictionaries"""
         if json_string is None or json_string == "[]":
             return ([])
         return (json.loads(json_string))
