@@ -8,9 +8,8 @@ Unittest classes:
     TestBase_from_json_string - line 
     TestBase_create - line 
     TestBase_load_from_file - line """
-
-import unittest
 import os
+import unittest
 from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
