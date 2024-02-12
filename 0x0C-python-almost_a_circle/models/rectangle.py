@@ -12,8 +12,8 @@ class Rectangle(Base):
         Args:
             width (int): width of the rectangle
             height (int): height of the rectangle
-            x (int): x coordinate of the rectangle
-            y (int): y coordinate of the rectangle
+            x (int): x coordinate of the rectangle, 0 as default
+            y (int): y coordinate of the rectangle, 0 as default
             id (int): identity of the rectangle, None as default
         """
         self.width = width
