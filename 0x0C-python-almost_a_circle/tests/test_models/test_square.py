@@ -419,7 +419,7 @@ class TestSquare_stdout(unittest.TestCase):
         """Test display method for all attributes"""
         sq = Square(2, 1, 1, 9)
         capture = TestSquare_stdout.capture_stdout(sq, "display")
-        self.assertEqual("\n ##\n, ##\n", capture.getvalue())
+        self.assertEqual("\n ##\n ##\n", capture.getvalue())
 
     def test_display_arg(self):
         """Test display method for args passed to display()"""
