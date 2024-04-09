@@ -6,4 +6,7 @@ if (process.argv.length === 2) {
 } else {
   console.log('Arguments found');
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> bb7e10f486c471b0b7019078cbf776865ff78935
