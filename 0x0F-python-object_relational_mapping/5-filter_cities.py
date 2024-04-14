@@ -14,7 +14,7 @@ if __name__ == "__main__":
                  cities.state_id=states.id WHERE states.name=%s""",
                  (st_name,))
     rows = curs.fetchall()
-    for row in rows:
-        print(row)
+    city = list(row[0] for row in rows)
+    print(', '.join(city))
     curs.close()
     db.close()
