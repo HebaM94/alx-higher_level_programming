@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""script that prints the first State object from
-the database hbtn_0e_6_usa"""
+"""script that lists all State objects that contain
+the letter a from the database hbtn_0e_6_usa"""
 import sys
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
@@ -13,8 +13,6 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    state = session.query(State).first()
-    if state is None:
-        print("Nothing")
-    else:
-        print("{}: {}".format(state.id, state.name))
+    states = session.query(State).order_by(State.id).filter(State.name.like('%a%'))
+    for obj in states:
+        print("{}: {}".format(obj.id, obj.name))
