@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""script that adds the State object “Louisiana”
-to the database hbtn_0e_6_usa"""
+"""script that prints all City objects from the database hbtn_0e_14_usa"""
 import sys
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
