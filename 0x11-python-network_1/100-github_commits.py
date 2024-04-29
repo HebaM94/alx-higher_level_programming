@@ -9,7 +9,7 @@ import sys
 if __name__ == "__main__":
     repository = sys.argv[1]
     owner = sys.argv[2]
-    url = "https://api.github.com/repos/{owner}/{repository}/commits"
+    url = f"https://api.github.com/repos/{owner}/{repository}/commits"
     response = requests.get(url)
 
     if response.status_code == 200:
