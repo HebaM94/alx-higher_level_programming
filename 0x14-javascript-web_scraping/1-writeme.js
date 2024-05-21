@@ -7,4 +7,4 @@ const string = process.argv[3];
 
 writeFile(filepath, string, 'utf8', (error) => {
     if (error) throw error;
-  });
+});
