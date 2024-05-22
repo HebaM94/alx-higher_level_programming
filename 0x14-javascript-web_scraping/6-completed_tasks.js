@@ -9,16 +9,16 @@ request.get(url, (error, response, body) => {
   if (response && response.statusCode === 200) {
     const toDos = JSON.parse(body);
     const completedTasks = {};
-  
+
     for (const toDo of toDos) {
       if (toDo.completed === true) {
-      if (!completedTasks[toDo.userId]) {
-        completedTasks[toDo.userId] = 1;
-      } else {
-        completedTasks[toDo.userId]++;
+        if (!completedTasks[toDo.userId]) {
+          completedTasks[toDo.userId] = 1;
+        } else {
+          completedTasks[toDo.userId]++;
+        }
       }
-      }
-      }
-      console.log(completedTasks);
     }
+    console.log(completedTasks);
+  }
 });
