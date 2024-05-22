@@ -9,14 +9,14 @@ function getCharacter (characters, index) {
   request.get(characters[index], (error, response, body) => {
     if (error) console.error(error);
     if (response && response.statusCode === 200) {
-        console.log(JSON.parse(body).name);
-        if (index < characters.length - 1) {
-          getCharacter(characters, ++index);
-        }
+      console.log(JSON.parse(body).name);
+      if (index < characters.length - 1) {
+        getCharacter(characters, ++index);
+      }
     }
   });
 }
-  
+
 request.get(url + movieId, (error, response, body) => {
   if (error) console.error(error);
   if (response && response.statusCode === 200) {
