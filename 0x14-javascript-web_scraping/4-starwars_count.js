@@ -10,13 +10,13 @@ request.get(url, (error, response, body) => {
   if (response && response.statusCode === 200) {
     const films = JSON.parse(body).results;
     let count = 0;
-  
+
     for (const episode of films) {
-      let check = episode.characters.some((characterId) => {
+      const check = episode.characters.some((characterId) => {
         return characterId.slice(-3, -1) === '18';
       });
-    if (check) count++;
+      if (check) count++;
     }
     console.log(count);
-    }
+  }
 });
