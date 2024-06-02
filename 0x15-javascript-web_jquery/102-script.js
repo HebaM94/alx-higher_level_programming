@@ -4,6 +4,8 @@ $(document).ready(function() {
         var url = 'https://www.fourtonfish.com/hellosalut/hello/?lang=' + language;
         $.get(url, function(data) {
             $("div#hello").text(data.hello);
+        }).fail(function() {
+            $("div#hello").text('Error: Unable to fetch translation');
         });
     });
 });
